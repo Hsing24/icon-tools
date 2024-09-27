@@ -102,7 +102,7 @@ function createSVGTable(symbols) {
 			row.innerHTML = `
 					<td>${symbol.id}</td>
 					<td><svg class="icon-preview" viewBox="${symbol.viewBox}"><use href="#${symbol.id}"></use></svg></td>
-					<td><button class="copy-button" data-id="${idWithoutPrefix}">Copy ID</button></td>
+					<td><button class="copy-button" data-id="${idWithoutPrefix}">Copy</button></td>
 			`;
 
 			symbolsBody.appendChild(row);
