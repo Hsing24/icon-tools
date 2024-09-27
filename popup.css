@@ -1,0 +1,93 @@
+body {
+	width: 400px;
+	height: 500px;
+	font-family: Arial, sans-serif;
+}
+.tab {
+	display: flex;
+	gap: 0.5rem;
+}
+.tabButton {
+	padding: 0.5rem 1rem;
+	line-height: 1.25rem;
+	border: none;
+	border-radius: 0.5rem;
+	outline: none;
+	color: #6b7280;
+	background-color: transparent;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.tabButton:hover {
+	color: #374151;
+	background-color: #f9fafb;
+}
+.tabButton.active {
+	color: #0284c7;
+	background-color: #e0f2fe;
+}
+.tabContent {
+	margin-top: 0.5rem;
+	padding: 0.5rem 1rem;
+}
+
+.tabItem {
+	display: none;
+}
+.tabItem.active {
+	display: block;
+}
+
+.table {
+	width: 100%;
+	line-height: 1.25rem;
+	font-size: 0.875rem;
+	border-collapse: collapse;
+	background-color: #fff;
+}
+.table th,
+.table td {
+	padding: 0.5rem 1rem;
+	font-weight: 500;
+	text-align: left;
+	color: #111827;
+}
+.table th {
+	padding: 0.5rem 1rem;
+	font-weight: 500;
+	color: #111827;
+}
+.table tbody {
+	/* border-top: 2px solid #e5e7eb; */
+}
+.table tbody tr:nth-child(odd) {
+	background-color: #f9fafb;
+}
+.table tbody tr {
+	border-top: 1px solid #e5e7eb;
+}
+.table td + td {
+	color: #374151;
+}
+
+.icon-preview {
+	width: 30px;
+	height: 30px;
+	color: black;
+}
+.copy-button {
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.25rem;
+	padding: 0.75rem;
+	cursor: pointer;
+	color: #fff;
+	border: 1px solid #4f46e5;
+	border-radius: 0.25rem;
+	background-color: #4f46e5;
+	transition: 0.3s;
+}
+.copy-button:hover {
+	color: #4f46e5;
+	background-color: #fff;
+}
