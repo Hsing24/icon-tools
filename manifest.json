@@ -1,20 +1,23 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "SVG Tools",
   "version": "1.0",
-  "description": "Renders SVG symbols found in the webpage",
-  "permissions": ["activeTab"],
-  "browser_action": {
-    "default_title": "Render SVG Symbols"
+  "description": "Extract SVG symbols and convert SVG code",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+			"run_at": "document_idle"
     }
   ]
 }

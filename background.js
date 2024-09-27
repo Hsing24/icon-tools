@@ -1,3 +1,11 @@
-chrome.browserAction.onClicked.addListener(function (tab) {
-	chrome.tabs.sendMessage(tab.id, { action: "render_svg_symbols" });
+chrome.action.onClicked.addListener((tab) => {
+	chrome.scripting.executeScript({
+		target: { tabId: tab.id },
+		function: extractSVGSymbols,
+	});
 });
+
+function extractSVGSymbols() {
+	// This function will be implemented to extract SVG symbols
+	console.log("Extracting SVG symbols...");
+}
