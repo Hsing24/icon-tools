@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "SVG Tools",
+  "version": "1.0",
+  "description": "Renders SVG symbols found in the webpage",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_title": "Render SVG Symbols"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
