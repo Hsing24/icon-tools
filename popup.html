@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SVG Tool Extension</title>
+    <style>
+      body {
+        width: 400px;
+        height: 500px;
+        font-family: Arial, sans-serif;
+      }
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+      }
+      .tab button:hover {
+        background-color: #ddd;
+      }
+      .tab button.active {
+        background-color: #ccc;
+      }
+      .tabItem {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+      .tabItem.active {
+        display: block;
+      }
+      #symbolsTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      #symbolsTable th,
+      #symbolsTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      #symbolsTable th {
+        background-color: #f2f2f2;
+      }
+      .icon-preview {
+        width: 30px;
+        height: 30px;
+      }
+      .copy-button {
+        cursor: pointer;
+        padding: 5px 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab">
+      <button id="tabSymbolsButton" class="tablinks">Symbols</button>
+      <button id="tabConverterButton" class="tablinks">Converter</button>
+    </div>
+    <div class="tabContent">
+      <div id="tabSymbolsContent" class="tabItem">
+        <h3>SVG Symbols Extractor</h3>
+        <table id="symbolsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Icon</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="symbolsBody"></tbody>
+        </table>
+      </div>
+
+      <div id="tabConverterContent" class="tabItem">
+        <h3>SVG Converter</h3>
+        <textarea
+          id="svgInput"
+          rows="10"
+          cols="50"
+          placeholder="Paste your SVG code here"
+        ></textarea>
+        <button id="convertButton">Convert SVG</button>
+        <div id="conversionResult"></div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
