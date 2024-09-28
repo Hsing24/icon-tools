@@ -69,7 +69,7 @@ function bindSVGCopyButton() {
 			const idToCopy = this.getAttribute('data-id');
 			const text = this.textContent;
 			navigator.clipboard.writeText(idToCopy).then(() => {
-				this.textContent = 'Copied!';
+				this.textContent = 'OK';
 				setTimeout(() => {
 					this.textContent = text;
 				}, 2000);
